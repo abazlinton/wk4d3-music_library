@@ -1,0 +1,4 @@
+<h1>Albums</h1>
+<% @albums.each do |album|  %>
+  <p><%= album.name %> by <%= album.artist.name %></p>
+  <% end %>

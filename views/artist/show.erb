@@ -1,0 +1,7 @@
+  <h2>Artist</h2>
+  <%= @artist.name %><br>
+  <a href="/albums/new/<%= @artist.id %>">Create new Album</a>
+    <h3>Albums</h3  >
+    <% @artist.albums.each do |album| %>
+      <p><%= album.name %></p>
+    <% end %>
