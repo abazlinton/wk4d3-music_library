@@ -1,0 +1,4 @@
+<h3>albums</h3>
+<% @albums.each do |album|  %>
+  <p>'<%= album.name %>' - <%= album.artist.name %></p>
+  <% end %>

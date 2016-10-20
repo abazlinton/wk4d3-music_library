@@ -1,0 +1,15 @@
+<h3>new album</h3>
+
+<form action="/albums" method="post">
+  <label for="name">album title</label>
+  <input type="text" name="name" pattern=".{1,}" required title="1 character minimum">
+
+  <p><label for="artist_id">artist</label>
+  <select name="artist_id">
+    <% @artists.each do |artist| %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+    <% end %>
+  </select></p>
+  
+  <input type='submit' value="add">
+</form>

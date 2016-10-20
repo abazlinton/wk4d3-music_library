@@ -1,0 +1,11 @@
+ 
+ <h3><%= @artist.name %></h3>
+    <h4>Albums</h4>
+    <% @artist.albums.each do |album| %>
+      <p><%= album.name %></p>
+    <% end %>
+
+    <form action="/artists/<%= @artist.id %>" method="post">
+      <input type='submit' value="delete">
+      <input type="hidden" name="_method" value="delete">
+    </form>

@@ -1,0 +1,11 @@
+<h3>edit artist</h3>
+
+<form action="/artists/<%= @artist.id %>" method="post">
+  <label for="name">name</label>
+
+  <p><input type="text" name="name" pattern=".{1,}" required title="1 character minimum"  value="<%= @artist.name %>"></p>
+  
+  <input type='submit' value="edit">
+  <input type="hidden" value="<%= @old_name %>" name="old_name">
+  <input type="hidden" name="_method" value="put">
+</form>
